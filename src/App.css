@@ -17,6 +17,7 @@ p {
   margin: 50px auto;
   border: 1px solid rgb(27, 27, 27);
   border-radius: 5px;
+  overflow: hidden;
 }
 .header {
   width: 100%;
@@ -32,6 +33,7 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
 
 .user-avata {
   width: 30px;
@@ -74,8 +76,12 @@ p {
     100% - (var(--header-height) + var(--footer-height)) - 15px
   );
   margin: 0 5px;
-  overflow: auto;
+  overflow-y: scroll;
   padding: 5px 0 10px 0;
+}
+
+.comtent::-webkit-scrollbar {
+  display: none;
 }
 
 .comtent-message {
