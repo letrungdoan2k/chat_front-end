@@ -1,0 +1,151 @@
+p {
+  margin: 0;
+}
+
+:root {
+  --header-color: beige;
+  --footer-color: rgb(109, 247, 91);
+
+  --header-height: 50px;
+  --footer-height: 50px;
+}
+
+.comtainer {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  margin: 50px auto;
+  border: 1px solid rgb(27, 27, 27);
+  border-radius: 5px;
+}
+.header {
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--header-color);
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-user {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-avata {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  flex: none;
+}
+
+.user-avata img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user-name,
+.user-message {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.user-message {
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #e2e2e2;
+}
+
+.user-status {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(8, 245, 79);
+  border-radius: 50%;
+}
+
+.comtent {
+  height: calc(
+    100% - (var(--header-height) + var(--footer-height)) - 15px
+  );
+  margin: 0 5px;
+  overflow: auto;
+  padding: 5px 0 10px 0;
+}
+
+.comtent-message {
+  display: flex;
+  margin-top: 10px;
+  width: 80%;
+  padding-top: 10px;
+}
+
+.comtent-message-right {
+  margin-top: 10px;
+  float: right;
+  display: flex;
+  max-width: 80%;
+}
+
+.comtent-message-right .user-avata {
+  width: 10px;
+  height: 10px;
+}
+
+.comtent-message-right .user-avata img {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+}
+
+.comtent-message-right .user-message {
+  margin: 0 10px 0 0;
+  display: flex;
+  align-items: center;
+  background-color: #7bb6f0;
+  color: #fff;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  height: var(--footer-height);
+  background-color: var(--footer-color);
+  border-radius: 0 0 5px 5px;
+  display: flex;
+}
+
+.footer form {
+  align-self: center;
+}
+
+.message {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 5px;
+  align-items: inherit;
+}
+.message-icon {
+  align-self: center;
+}
+
+.message-content input {
+  border: 0;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.message-submit button {
+  border: 0;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 2px;
+}
